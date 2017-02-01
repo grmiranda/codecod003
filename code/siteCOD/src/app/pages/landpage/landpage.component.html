@@ -1,0 +1,226 @@
+<div class="navbar-fixed fix-zindex">
+  <nav class="nav-wrapper azulCOD z-depth-4">
+    <a routerLink="/home" class="brand-logo"><img src="imagens/logoBrancaH-pequena.png" style="padding: 5px 0px 0px 50px" width="250px"></a>
+    <!-- Imagem da lOGO deve ser inserida aqui-->
+    <a materialize="sideNav" [materializeParams]="[{draggable: true}]" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <!-- Buttons para exibição -->
+    <ul id="nav-wrapper" class="right hide-on-med-and-down" materialize="scrollSpy">
+      <li>
+        <a href="#home" materialize="scrollSpy">Home</a>
+      </li>
+      <li>
+        <a href="#sobre" materialize="scrollSpy">Sobre</a>
+      </li>
+      <li>
+        <a  href="#equipe" materialize="scrollSpy">Equipe</a>
+      </li>
+      <li>
+        <a>Depoimentos</a>
+      </li>
+      <li>
+        <a href="#faleConosco" materialize="scrollSpy">Fale Conosco</a>
+      </li>
+      <li>
+        <a materialize="modal" class="waves-effect waves-light btn blue darken-4" href="#loginModal">Login</a>
+      </li>
+    </ul>
+
+    <!-- Menu lateral para exibição mobile -->
+    <ul class="side-nav active" id="mobile-demo">
+      <li>
+        <a href="#home" materialize="scrollSpy">Home</a>
+      </li>
+      <li>
+        <a href="#sobre" materialize="scrollSpy">Sobre</a>
+      </li>
+      <li>
+        <a href="#equipe" materialize="scrollSpy">Equipe</a>
+      </li>
+      <li>
+        <a>Depoimentos</a>
+      </li>
+      <li>
+        <a href="#faleConosco" materialize="scrollSpy">Fale Conosco</a>
+      </li>
+      <li>
+        <a materialize="modal" class="waves-effect waves-light btn blue darken-4" href="#loginModal">Login</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<!--Login Modal-->
+<div materialize="modal" id="loginModal" class="modal modal-fixed-footer loginPane azulCOD">
+  <div class="modal-content">
+    <h4 class="center white-text" style="padding-right: 10px">LogIn</h4>
+    <form>
+      <div class="input-field white-text campo">
+        <input id="usuario" type="text" class="white-text" name="login">
+        <label class="white-text" for="usuario">Nome de Usuário</label>
+      </div>
+      <div class="input-field  campo">
+        <input id="senha" type="password" class="white-text" name="senha">
+        <label class="white-text" for="senha">Senha</label>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer azul loginPaneFooter">
+    <a materialize="modal" class="left white-text">Esqueci minha senha</a>
+    <a class="waves-effect waves-light btn blue darken-4">Login</a>
+  </div>
+</div>
+
+<!--Esqueci a senha Modal-->
+<div materialize="modal" id="esqueciModal" class="modal modal-fixed-footer loginPane azulCOD">
+  <div class="modal-content">
+    <h4 class="center white-text" style="padding-right: 10px">Esqueci minha senha</h4>
+    <form>
+      <div class="input-field white-text campo">
+        <i class="material-icons prefix">perm_identity</i>
+        <input id="usuario" type="text" class="validate white-text" name="email">
+        <label class="white-text" for="usuario">Email</label>
+      </div>
+      <div>
+        <p class="white-text justity" style="padding-right: 10px">Sera enviado um email para a conta associada com o email acima com as instruções para redefinição da senha</p>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer azul loginPaneFooter">
+    <a class="waves-effect waves-light btn blue darken-4">Enviar</a>
+  </div>
+</div>
+
+<!-- Conteudo -->
+
+<!-- Paralax inicio -->
+<div class="parallax-container parallax-container-full section scrollspy" materialize="scrollSpy" id="home">
+  <div materialize="parallax" class="parallax imagemFundo hide-on-small-and-down "><img src="imagens/wallpaperLandpageLM.jpg"></div>
+  <div materialize="parallax" class="parallax imagemFundo hide-on-med-and-up "><img src="imagens/wallpaperLandpageS.jpg"></div>
+  <h1 class="slogan hide-on-small-and-down">Na Code On Demand é possível!</h1>
+  <h1 class="slogan-s hide-on-med-and-up">Na Code On Demand é possível!</h1>
+  <p class="textoInicio  hide-on-small-and-down">Ter um software, site ou aplicativo feito</p>
+  <p class="textoInicio  hide-on-small-and-down">sob medida para você nunca foi tão facil.</p>
+  <p class="textoInicio  hide-on-small-and-down">Traga sua ideia, solucione seus problemas</p>
+  <p class="textoInicio  hide-on-small-and-down">e impulsione seus negócios</p>
+</div>
+
+<!--Sobre-->
+<div class="container section scrollspy" id="sobre" materialize="scrollSpy">
+  <h1 class="titulo hide-on-small-and-down">O que é a Code On Demand?</h1>
+  <h1 class="titulo-s hide-on-med-and-up">O que é a Code On Demand?</h1>
+  <div class="row">
+    <div class="col s12 m6 l5">
+      <p class="texto">Empresa especializada em desenvolvimento de software.</p>
+      <p class="texto">Desenvolvemos produtos para destop, mobile e web afim de atender da melhor maneira as demandas dos nossos clientes. <br/> Focamos em desenvolver com a maior qualidade um produto direcionado para o seu negócio.</p>
+    </div>
+    <div class="col s12 m6 l7 container center">
+      <img class="figura-right hide-on-small-and-down" src="imagens/plataformasLM.png">
+      <img class="figura-right-s hide-on-med-and-up" src="imagens/plataformasS.png">
+    </div>
+  </div>
+</div>
+
+<!-- Equipe -->
+<div class="parallax-container parallax-container-middle section scrollspy" id="equipe" materialize="scrollSpy">
+  <div materialize="parallax" class="parallax imagemFundo"><img src="imagens/telaEquipe.jpg"></div>
+  <h1 class="titulo hide-on-small-and-down white-text">Nossa Equipe</h1>
+  <h1 class="titulo-s hide-on-med-and-up white-text">Nossa Equipe</h1>
+  <div class="row">
+    <div class="col s12 m6 l3">
+      <div class="card">
+        <div class="card-image">
+          <img class="imagemCard" src="imagens/gabrielPerfil.jpg">
+          <span class="card-title">Gabriel Miranda</span>
+        </div>
+        <div class="card-content">
+          <p>Estudante de Computação na UEFS. Desenvolvedor apaixonado por Front-End</p>
+        </div>
+        <div class="card-action">
+          <a href="">FaceBook</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m6 l3">
+      <div class="card">
+        <div class="card-image">
+          <img class="imagemCard" src="imagens/ricardoPerfil.jpg">
+          <span class="card-title">Ricardo Nogueira</span>
+        </div>
+        <div class="card-content">
+          <p>Estudante de Computação na UEFS. Mago do Banco de Dados</p>
+        </div>
+        <div class="card-action">
+          <a href="">FaceBook</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m6 l3">
+      <div class="card">
+        <div class="card-image">
+          <img class="imagemCard" src="imagens/lucasPerfil.jpg">
+          <span class="card-title">Lucas Paiva</span>
+        </div>
+        <div class="card-content">
+          <p>Estudante de Computação na UEFS. Me chamam de menino prodígio...</p>
+        </div>
+        <div class="card-action">
+          <a href="">FaceBook</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m6 l3">
+      <div class="card">
+        <div class="card-image">
+          <img class="imagemCard" src="imagens/cleybsonPerfil.jpg">
+          <span class="card-title">Cleybson Cardoso</span>
+        </div>
+        <div class="card-content">
+          <p>Estudante de Computação na UEFS. Rapaz...assim... Faço de tudo um pouco</p>
+        </div>
+        <div class="card-action">
+          <a href="">FaceBook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fale conosco -->
+<div class="container section scrollspy" id="faleConosco" materialize="scrollSpy">
+  <div class="row">
+    <h1 class="titulo hide-on-small-and-down">Fale Conosco</h1>
+    <h1 class="titulo-s hide-on-med-and-up">Fale Conosco</h1>
+    <div class="col s12 m6 l5">
+      <p class="texto">Teve uma idea revolucionária? Quer dar um upgrade tecnológico na sua empresa? Quer ter um programa feito especialmente pra você?</p>
+      <h1 class="emp hide-on-small-and-down">Mande sua mensagem</h1>
+      <h1 class="emp-s hide-on-med-and-up">Mande sua mensagem</h1>
+    </div>
+    <div class="col s12 m6 l7">
+      <form>
+        <div class="input-field">
+          <input placeholder="Placeholder" id="nome" type="text" class="validate">
+          <label for="nome">Nome Completo</label>
+        </div>
+        <div class="input-field">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">mode_edit</i>
+          <textarea materialize="characterCounter" id="mensage" required class="materialize-textarea validate" length="500"></textarea>
+          <label class="white-text" for="mensage">Mensagem</label>
+        </div>
+        <div class="row">
+          <div class="right">
+            <button type="submit" name="submit" class="btn waves-effect waves-light azulCOD">Enviar
+                <i class="material-icons right">send</i>
+              </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
